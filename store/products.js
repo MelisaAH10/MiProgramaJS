@@ -66,7 +66,7 @@ console.log(prod4);
 
 // Uso del getter y setter
 console.log(prod4.supplier); 
-prod4.supplier = {supplier: "Proveedor2" };
+prod4.supplier = {supplier: "Proveedor2"};
 console.log(prod4.supplier); 
 */
 
