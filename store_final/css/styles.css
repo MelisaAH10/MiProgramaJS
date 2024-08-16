@@ -1,0 +1,275 @@
+      header {
+        height: 152px;
+        background-color: #ff3b3c;
+        /* Ejemplo de color */
+      }
+
+      section {
+
+        height: 340px;
+      }
+
+      main {
+
+        height: auto;
+      }
+
+      footer {
+
+        min-height: 368px;
+      }
+
+      body,
+      html {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+      }
+      .container {
+        width: 1220px;
+        margin: 0 auto;
+        /*border: 1px solid springgreen;*/
+        height: inherit;
+        min-height: inherit;
+
+      }
+
+      /* Card de producto */
+      .product-card {
+        background-color: #f0f0f0;
+        border-radius: 14px;
+        width: auto;
+        text-decoration: none;
+        padding: 5px;
+      }
+
+      /* Bloque de productos */
+      .product-container {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 20px;
+        padding: 20px;
+
+      }
+
+      @media (max-width: 1200px) {
+        .product-container {
+          grid-template-columns: repeat(3, 1fr);
+        }
+      }
+
+      @media (max-width: 900px) {
+        .product-container {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+
+      @media (max-width: 600px) {
+        .product-container {
+          grid-template-columns: 1fr;
+        }
+      }
+
+      .product-img {
+        width: 100%;
+        /* Asegura que la imagen cubra todo el ancho de la tarjeta */
+        height: 250px;
+        /* Define una altura fija para mantener la consistencia visual */
+        object-fit: cover;
+        /* Asegura que la imagen se recorte de manera uniforme */
+        object-position: center center;
+        /* Mantiene el enfoque en el centro del producto */
+
+      }
+
+      .product-info {
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .product-price-block {
+        display: flex;
+        margin: 5px 0;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .product-title {
+        font-size: larger;
+        font-weight: bold;
+        word-wrap: break-word;
+        display: block;
+        line-height: 22px;
+      }
+
+      .product-description {
+        font-size: smaller;
+        font-weight: normal;
+        color: #666;
+        margin-bottom: 6px;
+      }
+
+      .product-tax-policy {
+        font-size: small;
+        font-weight: light;
+      }
+
+      .product-price-block {
+        display: flex;
+        margin: 5px 0;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .product-price-block .price {
+        font-size: 22px;
+        font-weight: 700;
+        flex: 1;
+      }
+
+      .product-price-block .discount {
+        font-size: 12px;
+        font-weight: 700;
+        color: #428f13;
+      }
+
+      .product-title, .product-description, .price, .discount, .product-tax-policy {
+        color: black; /* Cambia el color del texto a negro */
+        text-decoration: none; /* Elimina el subrayado */
+      }
+
+      /* SECCION DE HERO */
+      section#hero {
+        border: 1px solid purple;
+        height: 340px;
+        background: url("../img/hero_bg.png");
+        background-size: cover;
+        background-position: top center;
+      }
+
+      section#hero .container {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+      }
+
+      .title-container span {
+        display: block;
+        color: white;
+        font-weight: 700;
+      }
+
+      .title-container span:first-child {
+        font-size: 40px;
+      }
+
+      .title-container span:last-child {
+        font-size: 100px;
+        line-height: 80px;
+      }
+        /*SECCION DE HEADER*/
+       header {
+        background-color: #ff3b3c; /* Ejemplo de color */
+       }
+      .search {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;/* Alinea los elementos a ambos extremos y el centro*/
+        align-items: center; /* Centra los elementos verticalmente*/
+        flex-wrap: wrap;/* Permite que los elementos se ajusten en filas adicionales si no hay suficiente espacio*/
+        padding: 20px 0;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .search .form {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+      .search .form input {
+        height: 62px;
+        border-radius: 14px;
+        border: none;
+        width: 505px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .search .social ul a {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .search .social ul li {
+        padding: 0 10px;
+      }
+
+      .nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav ul li a {
+        color: white;
+        font-weight: 700;
+        text-align: left;
+        text-decoration: none;
+      }
+
+      .nav ul li a:hover {
+        text-decoration: underline;
+      }
+
+      /*SECCION FOOTER*/
+      footer {
+        border: 1px solid #009145;
+        /* Hexadecimal color code*/
+        min-height: 368px;
+        background-color: #7525a7;
+      }
+
+      footer .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .row {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .row .col ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .row .col ul li {
+        padding: 5px 0;
+      }
+
+      .row .col ul li.col-main-item {
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+
+      .row .col ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .copyright {
+        border-top: 1px solid #ba53fb;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 30px 0;
+        box-sizing: border-box;
+      }
+
+    

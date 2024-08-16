@@ -1,0 +1,442 @@
+      header {
+        height: 152px;
+        background-color: #ff3b3c;
+        /* Ejemplo de color */
+      }
+
+      section {
+
+        height: 340px;
+      }
+
+      main {
+
+        height: auto;
+      }
+
+      footer {
+
+        min-height: 368px;
+      }
+
+      body,
+      html {
+        font-family: "Inter", sans-serif;
+        margin: 0;
+      }
+      .container {
+        width: 1220px;
+        margin: 0 auto;
+        /*border: 1px solid springgreen;*/
+        height: inherit;
+        min-height: inherit;
+        padding: 10px; /* Añade padding alrededor del contenedor principal para evitar que el contenido toque los bordes */
+      }
+      .columns-container {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+        gap: 20px; /* Añade esta línea para el espacio entre columnas */
+      }
+
+        /*SECCION DE HEADER*/
+       header {
+        background-color: #ff3b3c; /* Ejemplo de color */
+       }
+      .search {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;/* Alinea los elementos a ambos extremos y el centro*/
+        align-items: center; /* Centra los elementos verticalmente*/
+        flex-wrap: wrap;/* Permite que los elementos se ajusten en filas adicionales si no hay suficiente espacio*/
+        padding: 20px 0;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .search .form {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+      }
+      .search .form input {
+        height: 62px;
+        border-radius: 14px;
+        border: none;
+        width: 505px;
+        padding: 20px;
+        box-sizing: border-box;
+      }
+
+      .search .social ul a {
+        display: flex;
+        justify-content: flex-end;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .search .social ul li {
+        padding: 0 10px;
+      }
+
+      .nav ul {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav ul li a {
+        color: white;
+        font-weight: 700;
+        text-align: left;
+        text-decoration: none;
+      }
+
+      .nav ul li a:hover {
+        text-decoration: underline;
+      }
+      /*SECCION MAIN*/
+      .product-images-block, .product-description-block, .product-checkout-block {
+        flex: 1;
+        padding: 10px; /* Añade un padding para evitar que el contenido toque los bordes de la columna */
+      }
+      .product-description-block .product-title {
+        color: #333; /* Color oscuro para mejor legibilidad */
+        font-size: 24px; /* Tamaño significativo para destacar */
+        font-weight: bold; /* Negrita para resaltar */
+        margin-top: 0; /* Sin margen superior para alinear con elementos adyacentes */
+        word-wrap: break-word; /* Asegura que el título se ajuste dentro del contenedor */
+      }
+      .selector select {
+        width: 100%; /* Ajusta el ancho al contenedor padre */
+        padding: 8px 12px; /* Añade padding para mayor comodidad al usar */
+        margin: 8px 0; /* Añade un margen para separar los selectores */
+        border: 1px solid #ccc; /* Define un borde sutil */
+        border-radius: 4px; /* Bordes redondeados para un look moderno */
+        background-color: #f8f8f8; /* Color de fondo claro */
+        box-sizing: border-box; /* Asegura que el padding no afecte el ancho final */
+        font-family: "Inter", sans-serif; /* Alinea la tipografía con el resto del sitio */
+        font-size: 16px; /* Tamaño de fuente legible */
+        cursor: pointer; /* Cambia el cursor para indicar que es un elemento interactivo */
+      }
+      .selector label {
+        display: block; /* Asegura que cada etiqueta esté en su propia línea */
+        margin-bottom: 5px; /* Espacio entre la etiqueta y el selector */
+        font-weight: bold; /* Hace que la etiqueta sea más notoria */
+        color: #333; /* Color oscuro para mejor legibilidad */
+      }
+
+      .detailed-description {
+        font-size: 16px; /* Ajusta el tamaño de la fuente para mejorar la legibilidad */
+        color: #333; /* Color oscuro para una mejor lectura */
+        line-height: 1.6; /* Espaciado entre líneas para facilitar la lectura */
+        margin-bottom: 20px; /* Margen inferior para separar de otros elementos */
+      }
+      .detailed-description .section-title {
+        font-size: 20px; /* Tamaño de fuente más grande para el título de la sección */
+        color: #000; /* Color más oscuro para destacar el título */
+        margin-bottom: 10px; /* Margen inferior para separar el título del texto */
+        font-weight: bold; /* Hace el título más notorio */
+      }
+      .detailed-description p {
+        margin-bottom: 10px; /* Añade un margen inferior a cada párrafo para separarlos entre sí */
+      }
+
+      .product-images-block {
+        display: flex; /* Cambia la disposición a flex */
+        flex-direction: row; /* Alinea los elementos hijos en filas para que estén uno al lado del otro */
+        align-items: flex-start;
+        gap: 10px; /* Mantiene un espacio entre las miniaturas y el texto */
+        max-width: 100%;
+        overflow: hidden;
+      }
+      /*.product-images-block .thumbnail-container {
+        display: block; *//* Asegura que el contenedor se muestre como un bloque *//*
+        max-width: 100%;
+        overflow: hidden; *//* Mantiene la imagen dentro del contenedor *//*
+        margin: 10px; *//* Aumenta el margen para una mejor separación *//*
+        border: 2px solid #ddd; *//* Utiliza un borde más grueso y un color más claro *//*
+        border-radius: 8px; *//* Añade bordes redondeados para un aspecto más suave *//*
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1); *//* Añade una sombra sutil para profundidad *//*
+        transition: transform 0.3s ease; *//* Transición suave para efectos de hover *//*
+      }*/
+      .product-images-miniaturas {
+        width: 30%; /* Ajusta el ancho del contenedor de miniaturas */
+        display: flex; /* Usa flexbox para controlar la disposición de las miniaturas */
+        flex-direction: column; /* Alinea las miniaturas en una columna */
+        gap: 10px; /* Espacio entre las miniaturas */
+        align-items: center; /* Asegura que las miniaturas estén centradas horizontalmente */
+      }
+      .product-image-principal {
+        width: 70%; /* Ajusta el ancho del contenedor de la imagen principal para que sea más grande */
+        display: flex; /* Usa flexbox para alinear la imagen principal */
+        justify-content: center; /* Centra la imagen principal horizontalmente */
+        align-items: center; /* Centra la imagen principal verticalmente */
+      }
+      .product-image-principal img {
+        width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+        height: auto; /* Ajusta la altura automáticamente para mantener la proporción */
+        object-fit: contain; /* Asegura que la imagen se ajuste dentro del contenedor, manteniendo su proporción */
+      }
+      .product-images-miniaturas .thumbnail-container {
+        width: 100px; /* Ajusta el ancho del contenedor de miniaturas */
+        height: 80px; /* Altura fija para mantener la uniformidad */
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 5px auto; /* Centra el contenedor en la columna */
+        border: 1px solid #ddd;
+        border-radius: 4px;
+      }
+      .product-images-miniaturas .thumbnail-container:hover {
+        transform: scale(1.05); /* Efecto de zoom al pasar el mouse */
+      }
+      .product-images-miniaturas .thumbnail-container img {
+        width: 100%; /* Ajusta el ancho de la imagen automáticamente para mantener la proporción */
+        height: 100%; /* Ajusta la altura al 100% del contenedor para asegurar visibilidad */
+        object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor sin perder su proporción */
+        object-position: center; /* Centra la imagen en el contenedor */
+      }
+
+      .checkout-container {
+        background-color: #ebebeb; /* Color de fondo claro */
+        padding: 33px; /* Espaciado interno */
+        border-radius: 2px; /* Bordes ligeramente redondeados */
+      }
+      .checkout-total-label {
+        color: #ff3b3c; /* Color distintivo para el texto 'Total:' */
+      }
+      .checkout-total-price {
+        font-size: 28px; /* Tamaño grande para el precio */
+        font-weight: 700; /* Fuente en negrita */
+        margin-top: 10px; /* Espacio por encima del precio */
+      }
+      .checkout-description {
+        line-height: 20.4px; /* Espaciado de línea para mejorar la legibilidad */
+        word-wrap: break-word; /* Asegura que el texto no desborde el contenedor */
+      }
+      .checkout-policy-list {
+        list-style-type: none; /* Elimina los marcadores de lista */
+        margin-bottom: 30px; /* Espacio debajo de la lista */
+      }
+      .checkout-policy-list li {
+        display: flex; /* Alineación horizontal de íconos y texto */
+        margin: 15px 0; /* Espacio entre elementos de la lista */
+      }
+      .checkout-policy-list li .policy-icon {
+        margin-right: 15px; /* Espacio entre el ícono y el texto */
+      }
+
+      .checkout-process .top {
+        display: flex; /* Alinea el input y el botón horizontalmente */
+        margin-bottom: 10px; /* Espacio debajo del grupo superior */
+      }
+      .checkout-process .top input {
+        height: 40px;
+        border-radius: 10px;
+        border: none;
+        width: 62px;
+        margin-right: 10px;
+        padding: 0 10px 0 20px;
+        box-sizing: border-box;
+      }
+      .btn-primary {
+        width: 100%;
+        background: #ff3b3c;
+        color: white;
+        font-weight: bold;
+        border: none;
+        height: 40px;
+        border-radius: 10px;
+      }
+      .btn-primary:hover {
+        background: white;
+        color: #ff3b3c; /* Cambia el color del texto para mantener la visibilidad */
+      }
+      .btn-outline {
+        width: 100%;
+        border: 1px solid #ff3b3c;
+        background: #ff3b3c;
+        color: white;
+        font-weight: bold;
+        height: 40px;
+        border-radius: 10px;
+      }
+
+      .sales-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .sales-title h2 {
+        text-align: center; /* Alineación central para el título */
+        width: 100%; /* Ancho completo para el título */
+        margin-bottom: 42px; /* Espacio debajo del título */
+        font-size: 40px; /* Tamaño de fuente grande para captar atención */
+        font-weight: bold; /* Peso de la fuente para destacar */
+      }
+      .product-recomendados {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 20px;
+      }
+      .product-card {
+        background-color: #f0f0f0;
+        margin: 1%;
+        border-radius: 14px;
+        width: calc(33.333% - 2%); /* Ajusta el ancho para 3 en una fila, restando el margen */
+        text-decoration: none;
+        box-sizing: border-box;
+      }
+      .product-card .product-img {
+        border-top-left-radius: 14px; /* Redondea la esquina superior izquierda */
+          border-top-right-radius: 14px; /* Redondea la esquina superior derecha */
+      }
+
+      /*Seccion de los productos recomendados*/
+      .product-img {
+              width: 100%;
+              /* Asegura que la imagen cubra todo el ancho de la tarjeta */
+              height: 250px;
+              /* Define una altura fija para mantener la consistencia visual */
+              object-fit: cover;
+              /* Asegura que la imagen se recorte de manera uniforme */
+              object-position: center center;
+              /* Mantiene el enfoque en el centro del producto */
+
+            }
+
+            .product-info {
+              padding: 20px;
+              box-sizing: border-box;
+            }
+
+            .product-price-block {
+              display: flex;
+              margin: 5px 0;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            .product-title {
+              font-size: larger;
+              font-weight: bold;
+              word-wrap: break-word;
+              display: block;
+              line-height: 22px;
+            }
+
+            .product-description {
+              font-size: smaller;
+              font-weight: normal;
+              color: #666;
+              margin-bottom: 6px;
+            }
+
+            .product-tax-policy {
+              font-size: small;
+              font-weight: light;
+            }
+
+            .product-price-block {
+              display: flex;
+              margin: 5px 0;
+              justify-content: space-between;
+              align-items: center;
+            }
+
+            .product-price-block .price {
+              font-size: 22px;
+              font-weight: 700;
+              flex: 1;
+            }
+
+            .product-price-block .discount {
+              font-size: 12px;
+              font-weight: 700;
+              color: #428f13;
+            }
+
+            .product-title, .product-description, .price, .discount, .product-tax-policy {
+              color: black; /* Cambia el color del texto a negro */
+              text-decoration: none; /* Elimina el subrayado */
+            }
+
+      /*SECCION FOOTER*/
+      footer {
+        border: 1px solid #009145;
+        /* Hexadecimal color code*/
+        min-height: 368px;
+        background-color: #7525a7;
+      }
+
+      footer .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .columns-container {
+        flex: 1;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .columns-container .col ul {
+        list-style-type: none;
+        padding: 0;
+      }
+
+      .columns-container .col ul li {
+        padding: 5px 0;
+      }
+
+      .columns-container .col ul li.col-main-item {
+        font-weight: bold;
+        padding-bottom: 20px;
+      }
+
+      .columns-container .col ul li a {
+        color: white;
+        text-decoration: none;
+      }
+
+      .copyright {
+        border-top: 1px solid #ba53fb;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        padding: 30px 0;
+        box-sizing: border-box;
+      }
+
+      /*DISEÑO RESPONSIVE*/
+      /* Estilos base */
+      .product-card {
+        flex: 1 1 200px; /* Ajusta automáticamente el tamaño */
+        margin: 10px;
+        box-sizing: border-box;
+      }
+
+      /* Imágenes responsivas */
+      .product-img {
+        width: 100%;
+        height: auto;
+        border-top-left-radius: 14px;
+        border-top-right-radius: 14px;
+      }
+
+      /* Media Queries */
+      @media (max-width: 768px) {
+        .product-card {
+          flex-basis: 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        }
+      }
+      @media (max-width: 480px) {
+        .container {
+          flex-direction: column;
+        }
+      }
