@@ -21,7 +21,7 @@ for (let option of options) {
 }
 */
 
-const footerSelector = document.getElementById("footer");
+const footerSelector = document.querySelector("#footer");
 footerSelector.style.display = "flex"; // Usar flexbox para el diseño de columnas
 footerSelector.style.justifyContent = "space-between"; // Distribuir columnas uniformemente
 footerSelector.style.width = "100%"; // Asegurarse de que el footer abarque todo el ancho
