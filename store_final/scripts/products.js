@@ -22,7 +22,7 @@ class Product {
 const prod1 = new Product(
   "../html/details.html",
   "../img/mock1.jpg",
-  "Macbook Pro 15'4",
+  "Lenovo 15'4",
   "Space Gray",
   "$750.000",
   "50% Off",
@@ -32,7 +32,7 @@ const prod1 = new Product(
 const prod2 = new Product(
   "../html/details.html",
   "../img/mock1.jpg",
-  "Macbook Pro 15'4",
+  "HP Pavilion 15'4",
   "Space Gray",
   "$750.000",
   "50% Off",
