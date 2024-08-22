@@ -95,7 +95,7 @@ productsSelector.innerHTML = productsTemplate;
 // Definir la función createCard
 function createCard(product) {
   return `
-      <a class="product-card" href="${product.detailsUrl}">
+      <a class="product-card" href="../html/details.html?id=${product.id}">
         <img class="product-img" src="${product.imgSrc}" alt="${product.title}" />
         <div class="product-info">
           <span class="product-title">${product.title}</span>

@@ -5,7 +5,7 @@ function captureText() {
 */
 
 // Seleccionar el input de tipo texto con el id "search"
-const searchSelector = document.querySelector('#search');
+const searchSelector = document.querySelector("#search");
 
 // Definir la función captureText
 /*function captureText(event) {
@@ -15,8 +15,6 @@ const searchSelector = document.querySelector('#search');
 
 // Agregar un escuchador de eventos para el evento 'keyup'
 //searchSelector.addEventListener("keyup", captureText);
-
-
 
 /* Definir la función captureText
 function captureText(event) {
@@ -35,18 +33,18 @@ function captureText(event) {
   const searchText = event.target.value.toLowerCase();
 
   // Filtrar el array de productos
-  const filteredProducts = products.filter(product => 
-      product.title.toLowerCase().includes(searchText)
+  const filteredProducts = products.filter((product) =>
+    product.title.toLowerCase().includes(searchText)
   );
 
   // Actualizar la vista con una nueva impresión de las tarjetas
-  const productContainer = document.querySelector('#products');
-  productContainer.innerHTML = ''; // Limpiar el contenedor de productos
+  const productContainer = document.querySelector("#products");
+  productContainer.innerHTML = ""; // Limpiar el contenedor de productos
 
-  filteredProducts.forEach(product => {
-      const productCard = document.createElement('div');
-      productCard.className = 'product-card';
-      productCard.innerHTML = `
+  filteredProducts.forEach((product) => {
+    const productCard = document.createElement("div");
+    productCard.className = "product-card";
+    productCard.innerHTML = `
           <a href="${product.detailsUrl}">
               <img src="${product.imgSrc}" alt="${product.title}" class="product-img">
           </a>
@@ -56,10 +54,9 @@ function captureText(event) {
           <p class="product-discount">Descuento: ${product.discount}%</p>
           <p class="product-taxPolicy">Política de impuestos: ${product.taxPolicy}</p>
       `;
-      productContainer.appendChild(productCard);
+    productContainer.appendChild(productCard);
   });
 }
 
 // Agregar un escuchador de eventos para el evento 'keyup'
-searchSelector.addEventListener("keyup", event => captureText(event));
-
+searchSelector.addEventListener("keyup", (event) => captureText(event));

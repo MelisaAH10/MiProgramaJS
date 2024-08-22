@@ -1,133 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Tienda Virtual</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css..."/>
-    <link rel="stylesheet" href="../css/details.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css..." />
+    <link rel="stylesheet" href="../css/details.css" />
 
     <link rel="icon" type="image/svg" href="../img/tiendamia-logo.svg">
 </head>
+
 <body>
 
-<header>
-    <div class="container">
-        <div class="search">
-            <div class="logo">
-                <a class="logo" href="index.html">
-                    <img src="../img/tiendamia-logo.svg" width="218" alt="Logo store">
-                </a>
+    <header>
+        <div class="container">
+            <div class="search">
+                <div class="logo">
+                    <a class="logo" href="index.html">
+                        <img src="../img/tiendamia-logo.svg" width="218" alt="Logo store">
+                    </a>
+                </div>
+                <div class="social">
+                    <a><img src="../img/facebook.png" alt="Facebook"></a>
+                    <a><img src="../img/instagram.png" alt="Instagram"></a>
+                </div>
             </div>
-            <div class="social">
-                <a><img src="../img/facebook.png" alt="Facebook"></a>
-                <a><img src="../img/instagram.png" alt="Instagram"></a>
+            <div class="nav">
+                <ul>
+                    <li><a href="#">Ofertas de la semana</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="#">Contacto</a></li>
+                    <li><a href="#">Marca</a></li>
+                </ul>
             </div>
         </div>
-        <div class="nav">
-            <ul>
-                <li><a href="#">Ofertas de la semana</a></li>
-                <li><a href="#">Productos</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Marca</a></li>
-            </ul>
-        </div>
-    </div>
-</header>
+    </header>
 
-<main>
-    <div class="container">
-        <div class="columns-container">
-            <div class="product-images-block">
-                <div class="product-images-miniaturas">
-                    <div class="thumbnail-container">
-                        <img src="../img/mock1.jpg" alt="Descripción de Macbook Pro 15'4"/>
-                    </div>
-                    <div class="thumbnail-container">
-                        <img src="../img/mock2.jpg" alt="Descripción 2 de Macbook Pro 15'4"/>
-                    </div>
-                    <!-- Agregar más miniaturas según sea necesario -->
-                </div>
-                <div class="product-image-principal">
-                    <img src="../img/mock2.jpg" alt="Macbook Pro 15"/>
-                </div>
-            </div>
+    <main>
+        <div class="container">
+            <div class="columns-container" id="details">
 
-            <div class="product-description-block">
-                <h1 class="product-title">Macbook Pro 15'4</h1>
-
-                <div class="product-options">
-                    <form class="selector">
-                        <fieldset>
-                            <legend>Opciones del Producto</legend>
-
-                            <label class="label" for="color">Color:</label>
-                            <select id="color" name="color">
-                                <option value="rojo">Rojo</option>
-                                <option value="azul">Azul</option>
-                                <option value="verde">Verde</option>
-                            </select>
-
-                            <!--<label class="label" for="size">Tamaño:</label>
-                            <select id="size" name="size">
-                                <option value="pequeño">Pequeño</option>
-                                <option value="mediano">Mediano</option>
-                                <option value="grande">Grande</option>
-                            </select>-->
-                        </fieldset>
-                    </form>
-                </div>
-
-                <div class="detailed-description">
-                    <span class="section-title">Descripción</span>
-                    <p>Este es un detallado y exhaustivo texto sobre el producto </p>
-                    <p>Además, puedes hablar sobre la historia del producto, los materiales con los que está hecho </p>
-                </div>
-            </div>
-
-            <div class="product-checkout-block">
-                <div class="checkout-container">
-                    <span class="checkout-total-label">Total:</span>
-                    <h2 class="checkout-total-price">$152.400</h2>
-                    <p class="checkout-description">
-                        Incluye impuesto PAIS y percepción AFIP. Podés recuperar AR$ 50711
-                        haciendo la solicitud en AFIP.
-                    </p>
-
-                    <ul class="checkout-policy-list">
-                        <li>
-                        <span class="policy-icon">
-                            <img src="../img/truck.png" alt="Truck"/>
-                        </span>
-                            <span class="policy-desc">Agrega el producto al carrito para conocer los costos de envío</span>
-                        </li>
-                        <li>
-                        <span class="policy-icon">
-                            <img src="../img/plane.png" alt="Plane"/>
-                        </span>
-                            <span class="policy-desc">Recibí aproximadamente entre 10 y 15 días hábiles, seleccionando envío normal</span>
-                        </li>
-                    </ul>
-
-                    <div class="checkout-process">
-                        <div class="top">
-                            <input type="number" value="" min="1" max="10" step="1"/>
-                            <button class="btn-primary">Añadir al Carrito</button>
+                <!--
+                <div id="details">    
+                    <div class="product-images-block">
+                        <div class="product-images-miniaturas">
+                            <div class="thumbnail-container">
+                                <img src="../img/mock1.jpg" alt="Descripción de Macbook Pro 15'4" />
+                            </div>
+                            <div class="thumbnail-container">
+                                <img src="../img/mock2.jpg" alt="Descripción 2 de Macbook Pro 15'4" />
+                            </div>
+                            Agregar más miniaturas según sea necesario
                         </div>
-                        <!--<div class="bottom">
-                            <button class="btn-outline">Añadir al Carrito</button>
-                        </div>-->
+                        <div class="product-image-principal">
+                            <img src="../img/mock2.jpg" alt="Macbook Pro 15" />
+                        </div>
+                    </div>
+
+                    <div class="product-description-block">
+
+                        <h1 class="product-title">Macbook Pro 15'4</h1>
+
+                        <div class="product-options">
+                            <form class="selector">
+                                <fieldset>
+                                    <legend>Opciones del Producto</legend>
+                                    <label class="label" for="color">Color:</label>
+                                    <select id="color" name="color">
+                                        <option value="rojo">Rojo</option>
+                                        <option value="azul">Azul</option>
+                                        <option value="verde">Verde</option>
+                                    </select>
+
+                                    <label class="label" for="size">Tamaño:</label>
+                                    <select id="size" name="size">
+                                        <option value="pequeño">Pequeño</option>
+                                        <option value="mediano">Mediano</option>
+                                        <option value="grande">Grande</option>
+                                    </select>
+                                </fieldset>
+                            </form>
+                        </div>
+
+                        <div class="detailed-description">
+                            <span class="section-title">Descripción</span>
+                            <p>Este es un detallado y exhaustivo texto sobre el producto </p>
+                            <p>Además, puedes hablar sobre la historia del producto, los materiales con los que está
+                                hecho
+                            </p>
+                        </div>
                     </div>
                 </div>
+                    
+                <div class="product-checkout-block">
+                    <div class="checkout-container">
+                        <span class="checkout-total-label">Total:</span>
+                        <h2 class="checkout-total-price">$152.400</h2>
+                        <p class="checkout-description">
+                            Incluye impuesto PAIS y percepción AFIP. Podés recuperar AR$ 50711
+                            haciendo la solicitud en AFIP.
+                        </p>
+
+                        <ul class="checkout-policy-list">
+                            <li>
+                                <span class="policy-icon">
+                                    <img src="../img/truck.png" alt="Truck" />
+                                </span>
+                                <span class="policy-desc">Agrega el producto al carrito para conocer los costos de
+                                    envío</span>
+                            </li>
+                            <li>
+                                <span class="policy-icon">
+                                    <img src="../img/plane.png" alt="Plane" />
+                                </span>
+                                <span class="policy-desc">Recibí aproximadamente entre 10 y 15 días hábiles,
+                                    seleccionando envío normal</span>
+                            </li>
+                        </ul>
+
+                        <div class="checkout-process">
+                            <div class="top">
+                                <input type="number" value="" min="1" max="10" step="1" />
+                                <button class="btn-primary">Añadir al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                -->
             </div>
 
-        </div>
-
-        <div class="sales-block">
-            <h2 class="sales-title">OFERTAS DE LA SEMANA</h2>
-            <div class="product-recomendados">
+            <div class="sales-block">
+                <h2 class="sales-title">OFERTAS DE LA SEMANA</h2>
+                <div class="product-recomendados" id="products">
+                    <!--
                 <a class="product-card" href="./details.html">
                     <img class="product-img" src="\img\mock2.jpg" alt="Macbook Pro"/>
                     <div class="product-info">
@@ -170,22 +178,26 @@
                         </div>
                     </div>
                 </a>
+                -->
+                </div>
             </div>
         </div>
 
-    </div>
-</main>
+        </div>
+    </main>
 
-<footer>
-    <div class="container">
-        <div class="columns-container">
-            <div class="col">
+    <footer>
+        <div class="container">
+            <div class="row" id="nav">
+                <div class="col" id="footer">
+                    <!--
                 <ul>
                     <li class="col-main-item"><a href="#">Ofertas de la semana</a></li>
                     <li><a href="#">Laptops</a></li>
                     <li><a href="#">Audio</a></li>
                     <li><a href="#">Auticulares</a></li>
                 </ul>
+                
             </div>
             <div class="col">
                 <ul>
@@ -213,10 +225,17 @@
                 <ul>
                     <li class="col-main-item"><a href="#">Garantía de Entrega</a></li>
                 </ul>
+                -->
+                </div>
             </div>
+            <div class="copyright">Curso de HTML + CSS 2023</div>
         </div>
-        <div class="copyright">Curso de HTML + CSS 2023</div>
-    </div>
-</footer>
+    </footer>
+
+    <!-- Conectar los scripts -->
+    <script src="../scripts/layout.js"></script>
+    <script src="../scripts/products.js"></script>
+    <script src="../scripts/productDetail.js"></script>
 </body>
+
 </html>
