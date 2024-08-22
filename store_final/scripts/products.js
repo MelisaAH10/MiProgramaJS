@@ -17,12 +17,17 @@ class Product {
     this.imgSrc = imgSrc;
     this.title = title;
     this.description = description;
-    this.price = price;
+    this.price = this.parsePrice(price);
     this.discount = discount;
     this.taxPolicy = taxPolicy;
     this.color = color;
     this.descriptionGeneral = descriptionGeneral;
     this.images = images;
+  }
+
+  // Método para transformar el precio de string a número
+  parsePrice(price) {
+    return parseFloat(price.replace(/[^0-9.-]+/g, ""));
   }
 }
 

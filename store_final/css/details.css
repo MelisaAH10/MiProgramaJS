@@ -309,6 +309,9 @@ header {
   border-top-left-radius: 14px; /* Redondea la esquina superior izquierda */
   border-top-right-radius: 14px; /* Redondea la esquina superior derecha */
 }
+.subtotal {
+  margin-top: 20px; /* Ajusta el valor según sea necesario */
+}
 
 /*Seccion de los productos recomendados*/
 .product-img {
