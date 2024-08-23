@@ -13,7 +13,7 @@ function createCard(productDetails) {
             <span class="product-title">${productDetails.title}</span>
             <span class="product-description">${productDetails.description}</span>
             <div class="product-price-block">
-              <span class="price">${productDetails.price}</span>
+              <span class="price">$${productDetails.price}</span>
               <span class="discount">${productDetails.discount}</span>
             </div>
             <div class="product-tax-policy">
@@ -49,17 +49,73 @@ function changeSubtotal(event, productId) {
   subtotalLabel.textContent = `$${subtotal.toFixed(2)}`;
 }
 
+// Función para guardar el producto en el carrito
+/*
+function saveProduct(id) {
+  const found = products.find((each) => each.id === id);
+  const product = {
+    id: id,
+    title: found.title,
+    price: found.price,
+    image: found.images[0],
+    color: document.querySelector("#color").value,
+    quantity: document.querySelector("#quantity").value,
+  };
+  const stringifyProduct = JSON.stringify(product);
+  localStorage.setItem("cart", stringifyProduct);
+}*/
+
+function saveProduct(id) {
+  const found = products.find((each) => each.id === id);
+  const product = {
+    id: id,
+    title: found.title,
+    price: found.price,
+    image: found.images[0],
+    color: document.querySelector("#color").value,
+    quantity: document.querySelector("#quantity").value,
+  };
+
+  // Obtener el carrito actual del localStorage
+  let cart = localStorage.getItem("cart");
+  if (cart) {
+    try {
+      // Si el carrito existe, parsearlo a un array
+      cart = JSON.parse(cart);
+      if (!Array.isArray(cart)) {
+        cart = [];
+      }
+    } catch (e) {
+      // Si hay un error al parsear, inicializarlo como un array vacío
+      cart = [];
+    }
+  } else {
+    // Si el carrito no existe, inicializarlo como un array vacío
+    cart = [];
+  }
+
+  // Agregar el nuevo producto al carrito
+  cart.push(product);
+
+  // Guardar el carrito actualizado en el localStorage
+  localStorage.setItem("cart", JSON.stringify(cart));
+}
+
 // Definir la función printDetails
 function printDetails(id) {
   console.log(`ID Product: ${id}`);
 
   const product = products.find((each) => each.id === id);
 
-  const thumbnailImages = product.images.map((images) => `
+  const thumbnailImages = product.images
+    .map(
+      (image) => `
     <div class="thumbnail-container">
-      <img src="${images}" alt="${product.title}" onclick="changeMini(event)" />
+      <img src="${image}" alt="${product.title}" onclick="changeMini(event)" />
     </div>
-  `).join("");
+  `
+    )
+    .join("");
 
   const detailsTemplate = `
     <div class="product-images-block">
@@ -78,7 +134,9 @@ function printDetails(id) {
             <legend>Opciones del Producto</legend>
             <label class="label" for="color">Color:</label>
             <select id="color" name="color">
-              ${product.color.map((color) => `<option value="${color}">${color}</option>`).join("")}
+              ${product.color
+                .map((color) => `<option value="${color}">${color}</option>`)
+                .join("")}
             </select>
           </fieldset>
         </form>
@@ -92,7 +150,9 @@ function printDetails(id) {
     <div class="product-checkout-block">
       <div class="checkout-container">
         <span class="checkout-total-label">Total:</span>
-        <h2 class="checkout-total-price">$152.400</h2>
+        <h2 class="checkout-total-price">
+          <span id="subtotal">$${product.price.toFixed(2)}</span>
+        </h2>
         <p class="checkout-description">
           Incluye impuesto PAIS y percepción AFIP. Podés recuperar AR$ 50711
           haciendo la solicitud en AFIP.
@@ -115,11 +175,12 @@ function printDetails(id) {
         </ul>
         <div class="checkout-process">
           <div class="top">
-            <input type="number" value="1" min="1" max="10" step="1" onchange="changeSubtotal(event, '${product.id}')" />
-            <button class="btn-primary">Añadir al Carrito</button>
-          </div>
-          <div class="subtotal">
-            <span>Subtotal: </span><span id="subtotal">$${product.price.toFixed(2)}</span>
+            <input id="quantity" type="number" value="1" min="1" max="10" step="1" onchange="changeSubtotal(event, '${
+              product.id
+            }')" />
+            <button class="btn-primary" onclick="saveProduct('${
+              product.id
+            }')">Añadir al Carrito</button>
           </div>
         </div>
       </div>
