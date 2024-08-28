@@ -1,0 +1,123 @@
+.container-product {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 100%;
+  display: flex;
+}
+
+#cartproducts {
+  flex: 0 0 70%; /* Ocupa el 70% del ancho del contenedor */
+  max-width: 70%; /* Asegura que no exceda el 70% del ancho */
+  margin-right: 20px; /* Espacio entre #cartproducts y #total */
+}
+
+.product-card {
+  display: flex;
+  align-items: center; /* Alinea verticalmente al centro */
+  background-color: hsl(0, 15%, 94%);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 15px 0; /* Margen vertical entre tarjetas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  width: 100%; /* Ocupa el ancho completo del contenedor padre */
+  box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho */
+}
+
+.product-img {
+  flex: 1; /* Ocupa una parte del espacio disponible */
+  max-width: 25%; /* Limita el ancho máximo al 25% del contenedor padre */
+  height: auto; /* Mantiene la proporción de la imagen */
+  border-radius: 5px;
+  object-fit: cover; /* Ajusta la imagen para cubrir el área sin distorsionar */
+  margin-right: 15px; /* Espacio entre la imagen y la descripción */
+}
+
+.product-info {
+  flex: 3; /* Ocupa tres partes del espacio disponible */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Espacio entre elementos dentro de product-info */
+  width: 100%; /* Ocupa el ancho restante del contenedor */
+  overflow: hidden; /* Oculta el texto que se desborda */
+  text-overflow: ellipsis; /* Agrega "..." al final del texto que se desborda */
+  white-space: nowrap; /* Evita el salto de línea */
+  max-width: 100%; /* Asegura que el texto no exceda el ancho del contenedor */
+}
+
+.product-title {
+  font-size: 1.2em; /* Tamaño de fuente para el título */
+  font-weight: bold; /* Negrita para el título */
+}
+
+.product-color {
+  color: #666; /* Color gris para la lista de colores */
+  margin-bottom: 10px; /* Espacio inferior entre colores y otros detalles */
+}
+
+.product-price-block {
+  display: flex;
+  justify-content: space-between; /* Espacio entre precio y descuento */
+  align-items: center; /* Alinea verticalmente al centro */
+}
+
+.product-price {
+  font-size: 1.2em; /* Tamaño de fuente para el precio */
+  font-weight: bold; /* Negrita para el precio */
+  color: #333; /* Color del precio */
+}
+
+
+/*SECCION DE TOTAL*/
+#total {
+  flex: 1; /* Ocupa el resto del espacio disponible */
+  max-width: 30%; /* Asegura que no exceda el 30% del ancho */
+  height: 200px; /* Establece una altura específica */
+  align-self: flex-end; /* Alinea el contenedor al final del contenedor padre */
+  align-items: center; /* Alinea verticalmente al centro */
+  background-color: hsl(0, 15%, 94%);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 10px 0; /* Margen vertical entre tarjetas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+  max-width: 800px; /* Ajusta el ancho máximo según sea necesario */
+  box-sizing: border-box; /* Incluye el padding y border en el cálculo del ancho */
+}
+
+#total h2 {
+  margin-top: 0;
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+#cart-btn {
+  width: 100%;
+  background: #ff3b3c;
+  color: white;
+  font-weight: bold;
+  border: none;
+  height: 40px;
+  border-radius: 10px;
+}
+#cart-btn:hover {
+  background: #ff5151;
+}
+
+.product-tax-policy{
+
+  padding: 5px;
+  margin-bottom: 10px;
+}
+
+#footer-main {
+  padding-top: 20px; /* Ajusta el valor según tus necesidades */
+}
+
+input[type="number"] {
+  width: 50px;
+}

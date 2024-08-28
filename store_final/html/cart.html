@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tienda Virtual</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css..." />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="stylesheet" href="../css/cart.css" />
+
+  <link rel="icon" type="image/svg" href="../img/tiendamia-logo.svg">
+
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="search">
+        <div class="logo">
+          <a href="index.html"><img src="../img/tiendamia-logo.svg" width="218" alt="Logo store" /></a>
+        </div>
+
+        <div class="form">
+          <form>
+            <input type="text" placeholder="Buscar un producto" id="search" />
+          </form>
+        </div>
+
+        <div class="social">
+          <a><img src="../img/facebook.png" alt="Facebook"></a>
+          <a><img src="../img/instagram.png" alt="Instagram"></a>
+          <a href=""><img src="../img/images.png" alt="Carrito"></a>
+        </div>
+
+      </div>
+
+      <div class="nav">
+        <ul>
+          <li><a href="#">Ofertas de la semana</a></li>
+          <li><a href="#">Productos</a></li>
+          <li><a href="#">Contacto</a></li>
+          <li><a href="#">Marca</a></li>
+        </ul>
+      </div>
+
+    </div>
+  </header>
+
+
+  <section id="hero">
+    <div class="container">
+      <div class="title-container">
+        <span>MI</span>
+        <span>CARRITO</span>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="container-product">
+      <div id="cartproducts"> <!-- Tarjeta de producto del carrito -->
+        <!-- Aquí se agregarán las tarjetas de productos del carrito -->
+      </div>
+      <div id="total"> <!-- Cuadro de cálculo del total a pagar -->
+        <!-- Aquí se mostrará el total a pagar -->
+      </div>
+    </div>
+  </main>
+
+  <footer id="footer-main"> <!-- Asignar id="footer" -->
+    <div class="container">
+      <div class="row" id="nav"> <!-- Asignar id="nav" -->
+        <div class="col" id="footer">
+        </div>
+      </div>
+      <div class="copyright">Curso de HTML + CSS 2023</div>
+    </div>
+  </footer>
+
+  <script src="../scripts/layout.js"></script> <!-- Conectar layout.js -->
+  <script src="../scripts/products.js"></script> <!-- Conectar products.js -->
+  <script type="module" src="../scripts/cart.js"></script>
+  <script type="module" src="../scripts/total.js"></script>
+  <script type="module" src="../scripts/buy.js"></script>
+</body>
+
+</html>

@@ -71,7 +71,9 @@ function saveProduct(id) {
     id: id,
     title: found.title,
     price: found.price,
+    description: found.description,
     image: found.images[0],
+    descriptionGeneral: found.descriptionGeneral,
     color: document.querySelector("#color").value,
     quantity: document.querySelector("#quantity").value,
   };
