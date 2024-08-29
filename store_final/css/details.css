@@ -262,11 +262,26 @@ header {
   border: none;
   height: 40px;
   border-radius: 10px;
+  margin-right: 10px;
 }
 .btn-primary:hover {
   background: white;
   color: #ff3b3c; /* Cambia el color del texto para mantener la visibilidad */
 }
+
+.btn-second {
+  background-color: #9a039a; /* Lila intenso */
+  color: #ffffff; /* Letra blanca */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+}
+
+.btn-second:hover {
+  background-color: #dc7cdc; /* Lila más oscuro al pasar el cursor */
+}
+
 .btn-outline {
   width: 100%;
   border: 1px solid #ff3b3c;

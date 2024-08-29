@@ -1,4 +1,4 @@
-.container-product {
+.container-product, .container-fav { 
   max-width: 1200px;
   margin: 0 auto;
   padding: 20px;
@@ -53,6 +53,14 @@
 .product-color {
   color: #666; /* Color gris para la lista de colores */
   margin-bottom: 10px; /* Espacio inferior entre colores y otros detalles */
+}
+
+.product-description {
+  display: block; /* Asegura que el span se comporte como un bloque */
+  overflow: hidden; /* Oculta el contenido desbordado */
+  text-overflow: ellipsis; /* Añade puntos suspensivos al contenido desbordado */
+  word-wrap: break-word; /* Permite que las palabras largas se dividan */
+  white-space: normal; /* Permite saltos de línea automáticos */
 }
 
 .product-price-block {
@@ -119,5 +127,58 @@
 }
 
 input[type="number"] {
-  width: 50px;
+  width: 50px; /* Ancho del input */
+  padding: 5px; /* Espaciado interno */
+  border: 1px solid #ccc; /* Borde del input */
+  border-radius: 4px; /* Bordes redondeados */
+  font-size: 16px; /* Tamaño de la fuente */
+  color: #333; /* Color del texto */
+  background-color: #f9f9f9; /* Color de fondo */
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra interna */
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Estilos para la sección de favoritos */
+h2.favoritos {
+  font-family: 'Roboto Slab', serif; /* Fuente decorativa */
+  color: rgb(170, 0, 255); /* Color del texto */
+  font-size: 2em; /* Tamaño del texto */
+  margin: 5px; /* Margen pequeño */
+  background-color: rgb(235, 144, 200); /* Fondo de color rojo */
+  display: flex; /* Usar flexbox para centrar verticalmente */
+  align-items: center; /* Centrar verticalmente el contenido */
+  justify-content: center; /* Centrar horizontalmente el contenido */
+  height: 50px; /* Altura del contenedor para centrar verticalmente */
+}
+
+.container-fav {
+  max-width: 1200px;
+  margin: 0 auto; /* Centrar el contenedor */
+  padding: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column; /* Asegura que los hijos se apilen verticalmente */
+}
+
+.favoritos {
+  font-family: 'Roboto Slab', serif; /* Fuente decorativa */
+  color: rgb(170, 0, 255); /* Color del texto */
+  font-size: 2em; /* Tamaño del texto */
+  margin-top: 0; /* Elimina el margen superior */
+}
+
+.add-to-cart-btn {
+  background-color: #800080; /* Lila intenso */
+  color: #ffffff; /* Letra blanca */
+  border: none; /* Sin borde */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño de la fuente */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  border-radius: 5px; /* Bordes redondeados */
+  transition: background-color 0.3s ease; /* Transición suave para el cambio de color */
+  margin-top: 10px; /* Margen superior para separar del contenido anterior */
+}
+
+.add-to-cart-btn:hover {
+  background-color: #660066; /* Lila más oscuro al pasar el cursor */
 }

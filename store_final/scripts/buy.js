@@ -5,11 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Lógica para actualizar el total del carrito
     console.log("Total actualizado");
   }
+
   // Definir la función printCartCards
   function printCartCards(cartproducts) {
     // Lógica para imprimir las tarjetas de productos del carrito
     console.log("Tarjetas de productos actualizadas");
   }
+
   // Seleccionar el botón "Finaliza tu compra"
   const buySelector = document.getElementById("cart-btn");
 

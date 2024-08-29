@@ -103,6 +103,55 @@ function saveProduct(id) {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
+//#################################################
+function saveFavoriteProduct(id) {
+  const found = products.find((each) => each.id === id);
+  if (!found) return;
+
+  const favoriteProduct = {
+    id: id,
+    title: found.title,
+    price: found.price,
+    description: found.description,
+    image: found.images[0],
+    descriptionGeneral: found.descriptionGeneral,
+    color: document.querySelector("#color").value,
+    quantity: document.querySelector("#quantity").value,
+  };
+
+  // Obtener la lista de favoritos actual del localStorage
+  let favorites = localStorage.getItem("favorites");
+  if (favorites) {
+    try {
+      // Si la lista de favoritos existe, parsearla a un array
+      favorites = JSON.parse(favorites);
+      if (!Array.isArray(favorites)) {
+        favorites = [];
+      }
+    } catch (e) {
+      // Si hay un error al parsear, inicializarla como un array vacío
+      favorites = [];
+    }
+  } else {
+    // Si la lista de favoritos no existe, inicializarla como un array vacío
+    favorites = [];
+  }
+
+  // Verificar si el producto ya está en la lista de favoritos
+  const existingProductIndex = favorites.findIndex(product => product.id === id);
+  if (existingProductIndex !== -1) {
+    // Actualizar el producto existente en la lista de favoritos
+    favorites[existingProductIndex] = favoriteProduct;
+  } else {
+    // Agregar el nuevo producto a la lista de favoritos
+    favorites.push(favoriteProduct);
+  }
+
+  // Guardar la lista de favoritos actualizada en el localStorage
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+}
+//#################################################
+
 // Definir la función printDetails
 function printDetails(id) {
   console.log(`ID Product: ${id}`);
@@ -183,6 +232,7 @@ function printDetails(id) {
             <button class="btn-primary" onclick="saveProduct('${
               product.id
             }')">Añadir al Carrito</button>
+            <button class="btn-second" onclick="saveFavoriteProduct('${product.id}')">Añadir a favoritos</button>
           </div>
         </div>
       </div>
